@@ -11,5 +11,5 @@ Este software tem como objetivo ser uma ferramenta de apoio na manutenção e di
 ## FLUXOGRAMA
 ![META_MInA-Fluxograma drawio](https://user-images.githubusercontent.com/54192152/163652204-a72ca351-d126-4ee4-b7ce-4e5db9134a34.png)
 
-## JANELAS
+## PROTOTIPO DESIGN JANELAS
 ![Janelas META_MInA](https://user-images.githubusercontent.com/54192152/163652630-16c308aa-0dc2-4193-ade9-647dd1c2b68b.png)
