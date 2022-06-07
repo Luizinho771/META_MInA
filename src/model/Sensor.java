@@ -7,10 +7,6 @@ public abstract class Sensor {
     private int DelayVariation;
     private int StopsQuantity;
 
-    public Sensor(){
-
-    }
-
     public int getInitialDelay() {
         return InitialDelay;
     }
