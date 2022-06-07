@@ -1,7 +1,7 @@
 package model;
 
 public abstract class Sensor {
-    public  int InitialDelay;
+    private  int InitialDelay;
     private int ProductionInterval;
     private int ProductionQuantity;
     private int DelayVariation;
