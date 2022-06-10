@@ -17,6 +17,29 @@ public class HomeScreen extends JFrame {
                 setVisible(opt);
         }
 
+        public void setBoxType(int pos, String type) {
+                switch (pos) {
+                        case 1:
+                                jButton1.setText(type);
+                                jCheckBox1.setSelected(true);
+                                break;
+                        case 2:
+                                jButton4.setText(type);
+                                jCheckBox2.setSelected(true);
+                                break;
+
+                        case 3:
+                                jButton2.setText(type);
+                                jCheckBox3.setSelected(true);
+                                break;
+
+                        case 4:
+                                jButton3.setText(type);
+                                jCheckBox5.setSelected(true);
+                                break;
+                }
+        }
+
         private void initComponents() {
                 jButton5 = new javax.swing.JButton();
                 jPanel1 = new javax.swing.JPanel();

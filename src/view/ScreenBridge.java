@@ -21,14 +21,20 @@ public class ScreenBridge {
         selectsensorscreen.changeVisible(false);
     }
 
-    public void SelecttoConfig(String type) {
+    public void SelecttoConfig(String type, int pos) {
         selectsensorscreen.changeVisible(false);
         configscreen.changeVisible(true);
-        configscreen.setType(type);
+        configscreen.setType(type, pos);
     }
 
     public void ConfigtoSelect() {
         selectsensorscreen.changeVisible(true);
         configscreen.changeVisible(false);
+    }
+
+    public void ConfigtoHome(int pos, String type) {
+        configscreen.setVisible(false);
+        homescreen.setVisible(true);
+        homescreen.setBoxType(pos, type);
     }
 }

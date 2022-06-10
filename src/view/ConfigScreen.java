@@ -24,6 +24,7 @@ public class ConfigScreen extends JFrame {
         ScreenBridge screenbridge;
         SensorControl sensorcontrol;
         String type;
+        int pos;
 
         public ConfigScreen() {
                 sensorcontrol = new SensorControl();
@@ -34,8 +35,9 @@ public class ConfigScreen extends JFrame {
                 screenbridge = bridge;
         }
 
-        public void setType(String type) {
+        public void setType(String type, int pos) {
                 this.type = type;
+                this.pos = pos;
         }
 
         public void changeVisible(boolean opt) {
@@ -134,7 +136,7 @@ public class ConfigScreen extends JFrame {
                                 jcomp12.getText(),
                                 jcomp13.getText(), type);
                 if (check == true) {
-                        System.out.println("foi " + jcomp11.getText());
+                        screenbridge.ConfigtoHome(pos, type);
                 } else {
                         jcomp14.setVisible(true);
                 }
