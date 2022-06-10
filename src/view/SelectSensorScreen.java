@@ -3,9 +3,18 @@ package view;
 import javax.swing.*;
 
 public class SelectSensorScreen extends JFrame {
+        ScreenBridge screenbridge;
 
         public SelectSensorScreen() {
                 initComponents();
+        }
+
+        public void setBridge(ScreenBridge bridge) {
+                screenbridge = bridge;
+        }
+
+        public void changeVisible(boolean opt) {
+                setVisible(opt);
         }
 
         private void initComponents() {
@@ -19,7 +28,7 @@ public class SelectSensorScreen extends JFrame {
                 jTextPane1 = new javax.swing.JTextPane();
 
                 setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-                setVisible(true);
+                setVisible(false);
 
                 jButton1.setText("Eletromecânico ");
                 jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -172,28 +181,24 @@ public class SelectSensorScreen extends JFrame {
         }// </editor-fold>//GEN-END:initComponents
 
         private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {
-                new HomeScreen();
-                setVisible(false);
+                screenbridge.SelecttoHome();
         }// GEN-LAST:event_jButton4ActionPerformed
 
         private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {
-                new ConfigScreen();
-                setVisible(false);
+                screenbridge.SelecttoConfig("eletromechanical");
         }// GEN-LAST:event_jButton4ActionPerformed
 
         private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton3ActionPerformed
-                new ConfigScreen();
-                setVisible(false);
+                screenbridge.SelecttoConfig("magnetic");
         }// GEN-LAST:event_jButton3ActionPerformed
 
         private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton2ActionPerformed
-                new ConfigScreen();
-                setVisible(false);
+                screenbridge.SelecttoConfig("optical");
+                ;
         }// GEN-LAST:event_jButton2ActionPerformed
 
         private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton1ActionPerformed
-                new ConfigScreen();
-                setVisible(false);
+                screenbridge.SelecttoConfig("proximity");
         }// GEN-LAST:event_jButton1ActionPerformed
 
         // Variables declaration - do not modify//GEN-BEGIN:variables

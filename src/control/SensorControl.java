@@ -13,7 +13,26 @@ public class SensorControl {
         sensors = new ArrayList<Sensor>();
     }
 
-    public void addSensor(int InitialDelay, int ProductionInterval, int ProductionQuantity, int DelayVariation,
+    public boolean buildSensor(String InitialDelayStr, String ProductionIntervalStr, String ProductionQuantityStr,
+            String DelayVariationStr, String StopsQuantityStr, String type) {
+        int InitialDelay = isNumeric(InitialDelayStr);
+        int ProductionInterval = isNumeric(ProductionIntervalStr);
+        int ProductionQuantity = isNumeric(ProductionQuantityStr);
+        int DelayVariation = isNumeric(DelayVariationStr);
+        int StopsQuantity = isNumeric(StopsQuantityStr);
+
+        if (InitialDelay == -1 || ProductionInterval == -1 || ProductionQuantity == -1 || DelayVariation == -1
+                || StopsQuantity == -1) {
+            return false;
+        } else {
+            addSensor(InitialDelay, ProductionInterval, ProductionQuantity, DelayVariation, StopsQuantity, type);
+            return true;
+        }
+
+    }
+
+    public void addSensor(int InitialDelay, int ProductionInterval, int ProductionQuantity,
+            int DelayVariation,
             int StopsQuantity, String type) {
         FactorySensor factorySensor = new FactorySensor();
         Sensor s = factorySensor.factory(type);
@@ -24,5 +43,12 @@ public class SensorControl {
         s.setStopsQuantity(StopsQuantity);
         sensors.add(s);
     }
+
+    public static int isNumeric(String str) {
+        if (str.matches("-?\\d+(\\.\\d+)?")) {
+            return Integer.parseInt(str);
+        } else {
+            return -1;
+        }
+    }
 }
-// GerenciarSensores configurados
