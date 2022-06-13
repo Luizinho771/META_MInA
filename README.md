@@ -9,7 +9,7 @@ Este software tem como objetivo ser uma ferramenta de apoio na manutenção e di
 
 ## DOCUMENTAÇÃO
 
- [META_MInA]([https://portal.mina.com.br/](https://docs.google.com/document/d/1e50X3TRfWEq6lRn4H5-a_MyoIenEwfexeg7Q41O_d60/edit?usp=sharing))
+ [META_MInA] (https://docs.google.com/document/d/1e50X3TRfWEq6lRn4H5-a_MyoIenEwfexeg7Q41O_d60/edit?usp=sharing)
 
 ## MVP
 
